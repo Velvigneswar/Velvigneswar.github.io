@@ -1,0 +1,162 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* BODY */
+body {
+    line-height: 1.6;
+}
+
+/* HEADER / NAVBAR */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 30px;
+    background: #0f172a;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    font-size: 16px;
+}
+
+nav a:hover {
+    color: #38bdf8;
+}
+
+/* Home Page */
+.hero {
+    height: 85vh;
+    background: linear-gradient(to right, #0ea5e9, #0369a1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    color: white;
+}
+
+.hero h1 {
+    font-size: 48px;
+    max-width: 900px;
+}
+
+.hero button {
+    margin-top: 25px;
+    padding: 14px 40px;
+    font-size: 18px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    background: white;
+    color: #0369a1;
+    font-weight: bold;
+}
+
+.hero button:hover {
+    background: #e0f2fe;
+}
+
+/*COURSES */
+.features {
+    padding: 60px 40px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+    background: #f8fafc;
+}
+
+.card {
+    background: white;
+    padding: 30px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.card h3 {
+    margin-bottom: 10px;
+    color: #0369a1;
+}
+
+/* FOOTER */
+footer {
+    background: #0f172a;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+
+
+@media (max-width: 600px) {
+    header {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    nav a {
+        margin: 0 10px;
+        font-size: 14px;
+    }
+
+    .hero h1 {
+        font-size: 26px;
+    }
+
+    .hero button {
+        font-size: 16px;
+        padding: 12px 30px;
+    }
+
+    .features {
+        grid-template-columns: 1fr;
+        padding: 40px 20px;
+    }
+}
+
+
+@media (min-width: 601px) and (max-width: 900px) {
+    .hero h1 {
+        font-size: 36px;
+    }
+
+    .features {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+@media (min-width: 901px) and (max-width: 1200px) {
+    .hero h1 {
+        font-size: 42px;
+    }
+
+    .features {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+
+@media (min-width: 1201px) {
+    .hero h1 {
+        font-size: 52px;
+    }
+
+    .features {
+        grid-template-columns: repeat(4, 1fr);
+        max-width: 1400px;
+        margin: auto;
+    }
+}
